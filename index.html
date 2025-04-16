@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="images/png" href="favicon.png" />
+  <title>SeggaJustice | Business Compliance Made Simple</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+	  /* CSS Variables (Theme) */
+	:root {
+	  --color-gold: #D4AF37;
+	  --color-gold-bright: #FFD700;
+	  --color-cream: #F5E6C8;
+	  --color-white: #FFFFFF;
+	  --color-navy: #0A2463;
+	  --color-charcoal: #333333;
+	  --color-green: #2E5E4E;
+	}
+
+	/* Base Styles */
+	body {
+	  font-family: 'Open Sans', sans-serif;
+	  color: var(--color-charcoal);
+	  line-height: 1.6;
+	}
+
+	/* Color Utility Classes */
+	.bg-gold { background-color: var(--color-gold); }
+	.bg-navy {
+		background-color: var(--color-gold);
+		box-shadow: 2px 8px 4px #0000008a;
+		z-index: 1000;
+		position: relative;
+	}
+	.bg-cream { background-color: var(--color-cream); }
+	.text-gold { color: var(--color-gold); }
+	.text-navy { color: var(--color-navy); }
+	.text-charcoal { color: var(--color-charcoal); }
+	.border-gold { border: 1px solid var(--color-gold); }
+
+	/* Buttons */
+	.btn-gold {
+	  background-color: var(--color-gold);
+	  color: var(--color-navy);
+	  font-weight: 600;
+	  border: none;
+	}
+	.btn-gold:hover {
+	  background-color: var(--color-gold-bright);
+	  color: var(--color-navy);
+	}
+	.nav-link {
+		color : white !important;
+	}
+	/* Hero Section */
+	.hero-section {
+	  background: linear-gradient(rgba(10, 36, 99, 0.7), rgba(10, 36, 99, 0.7)), 
+				  url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1800&q=80');
+	  background-size: cover;
+	  background-position: center;
+	  height: 80vh;
+	  display: flex;
+	  align-items: center;
+	}
+	.hero-section  .text-white {
+		text-align : center;
+		margin : 0px auto;
+	}
+	/* Card Styling */
+	.card {
+	  transition: transform 0.3s;
+	}
+	.card:hover {
+	  transform: translateY(-5px);
+	  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	}
+	.symbol {
+		color : #D2691E;
+		font-weight : 700;
+	}
+	.symbol h4 {
+		margin-top: 15px;
+		text-align: center;
+		text-shadow: 1px 2px 2px black;
+	}
+	/* Responsive Adjustments */
+	@media (max-width: 768px) {
+	  .hero-section {
+		height: 60vh;
+		text-align: center;
+	  }
+	}
+  </style>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="bg-navy py-3">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!--<a class="navbar-brand" href="#">
+          <img src="logo.jpg" alt="SeggaJustice Logo">
+        </a>-->
+		<a class="navbar-brand" href="#">
+          <p>SeggaJustice</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-8 text-white">
+          <h1 class="display-4 fw-bold">Welcome to SeggaJustice</h1>
+          <p class="lead">What We Do, We Do Well.</p>
+          <a href="#contact" class="btn btn-gold btn-lg mt-3">Get Started Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="py-5 bg-cream">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="text-navy mb-4">About SeggaJustice</h2>
+          <p class="text-charcoal">We simplify business registration and compliance for startups, SMEs, and NGOs in South Africa. Our mission is to provide affordable, reliable services that empower entrepreneurs to focus on growth while we handle the paperwork.</p>
+          <p class="text-charcoal"><strong>B-BBEE Level 1 Contributor</strong> – Enhancing your procurement opportunities.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Team Meeting" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center text-navy mb-5">Our Services</h2>
+      
+      <!-- Packages -->
+      <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-gold">
+            <div class="card-header bg-gold text-white">
+              <h3 class="mb-0">Bronze Package</h3>
+            </div>
+            <div class="card-body">
+              <h4 class="text-navy">R850</h4>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-gold me-2"></i>Company Registration</li>
+                <li><i class="fas fa-check text-gold me-2"></i>Name Reservation</li>
+                <li><i class="fas fa-check text-gold me-2"></i>Free B-BBEE</li>
+                <li><i class="fas fa-check text-gold me-2"></i>Tax Number/PIN</li>
+                <li><i class="fas fa-check text-gold me-2"></i>Letterheads</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-gold">
+            <div class="card-header bg-gold text-white">
+              <h3 class="mb-0">Silver Package</h3>
+            </div>
+            <div class="card-body">
+              <h4 class="text-navy">R1100</h4>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-gold me-2"></i><strong>All Bronze Services</strong></li>
+                <li><i class="fas fa-check text-gold me-2"></i>CSD Registration</li>
+                <li><i class="fas fa-check text-gold me-2"></i>Share Certificate</li>
+                <li><i class="fas fa-check text-gold me-2"></i>Beneficial Ownership</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-gold">
+            <div class="card-header bg-gold text-white">
+              <h3 class="mb-0">Gold Package</h3>
+            </div>
+            <div class="card-body">
+              <h4 class="text-navy">R1350</h4>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-gold me-2"></i><strong>All Silver Services</strong></li>
+                <li><i class="fas fa-check text-gold me-2"></i>CIDB Grade 1</li>
+                <li><i class="fas fa-check text-gold me-2"></i>Priority Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- À La Carte Services -->
+      <h3 class="text-center text-navy mb-4">À La Carte Services</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Company Registration
+              <span class="badge bg-gold rounded-pill">R500</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              CSD Registration
+              <span class="badge bg-gold rounded-pill">R350</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              B-BBEE Certificate
+              <span class="badge bg-gold rounded-pill">R100</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Business Plan
+              <span class="badge bg-gold rounded-pill">R2500</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              VAT Submission
+              <span class="badge bg-gold rounded-pill">R350</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Logo Design
+              <span class="badge bg-gold rounded-pill">R300</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-us" class="py-5 bg-cream">
+    <div class="container">
+      <h2 class="text-center text-navy mb-5">Why Choose SeggaJustice?</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="p-4 bg-white rounded shadow-sm">
+            <i class="fas fa-coins fa-3x text-gold mb-3"></i>
+            <h3 class="text-navy">Transparent Pricing</h3>
+            <p class="text-charcoal">No hidden fees. Clear, upfront costs for all services.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="p-4 bg-white rounded shadow-sm">
+            <i class="fas fa-layer-group fa-3x text-gold mb-3"></i>
+            <h3 class="text-navy">One-Stop Shop</h3>
+            <p class="text-charcoal">From registrations to annual returns – we handle it all.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="p-4 bg-white rounded shadow-sm">
+            <i class="fas fa-star fa-3x text-gold mb-3"></i>
+            <h3 class="text-navy">B-BBEE Level 1</h3>
+            <p class="text-charcoal">Boost your procurement scoring with our accredited status.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center text-navy mb-5">Get in Touch</h2>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h3 class="text-navy">Contact Details</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-envelope text-gold me-2"></i>seggajustice@gmail.com</li>
+            <li class="mb-2"><i class="fas fa-phone text-gold me-2"></i>+27 71 726 8732 / +27 67 621 1534</li>
+            <li class="mb-2"><i class="fas fa-map-marker-alt text-gold me-2"></i>155 Scholtz Street, Lichtenburg, 2740</li>
+          </ul>
+          <div class="mt-4">
+            <h4 class="text-navy">Banking Details</h4>
+            <p class="text-charcoal">FNB | Acc: 62900888762<br>Branch: Bathopele (260849)</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <form class="bg-cream p-4 rounded shadow-sm">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="text-gold">SeggaJustice</h5>
+          <p>What We Do, We Do Well.</p>
+          <p>REG: 2021/360241/07 | TAX: 9135813252</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="text-gold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="text-white">Home</a></li>
+            <li><a href="#services" class="text-white">Services</a></li>
+            <li><a href="#contact" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="text-gold">Connect</h5>
+          <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <hr class="my-4 bg-gold">
+      <div class="text-center">
+        <p class="mb-0">&copy; <span class="year symbol"></span> SeggaJustice. All rights reserved.</p>
+      </div>
+	  <div class="row">
+				<a href="https://maobatechsolutions.co.za" Class="symbol"><h4>Maoba Tech Designs</h4></a>
+			</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+	document.querySelector(".year").innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
