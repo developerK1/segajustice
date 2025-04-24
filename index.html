@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="images/png" href="favicon.png" />
-  <title>segaJustice | Business Compliance Made Simple</title>
+  <title>Jay Holdings | Business Compliance Made Simple</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome (for icons) -->
@@ -68,6 +68,26 @@
 	  display: flex;
 	  align-items: center;
 	}
+	#contact figure {
+		display : flex;
+		justify-content: center;
+		align-items : center;
+		flex-direction : column;
+	}
+	#contact .fig-anchors {
+		display : block;
+		width : 100%;
+		margin : 15px 0px;
+		transition : all 0.6s ease-in-out;
+	}
+	#contact .fig-anchors , #contact figure{
+		transition : all 0.6s ease-in-out;
+	}
+	#contact .fig-anchors:hover {
+		letter-spacing : 1.5px;
+		font-weight : 700;
+		transform : scale(0.9);
+	}
 	.hero-section  .text-white {
 		text-align : center;
 		margin : 0px auto;
@@ -89,6 +109,79 @@
 		text-align: center;
 		text-shadow: 1px 2px 2px black;
 	}
+	.hide {
+		display : none !important;
+	}
+	.clock-loader {
+		position: relative;
+		width: 250px;
+		height: 250px;
+		margin: auto;
+		top: 20px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+        .clock-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 15px solid #D4AF37;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .center-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            background: #FFD700;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hand {
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            width: 3px;
+            height: 40%;
+            background: linear-gradient(to top, #FFD700, #D4AF37);
+            transform-origin: bottom;
+            border-radius: 2px;
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+        }
+
+        .hour-markings {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hour-marking {
+            position: absolute;
+            width: 3px;
+            height: 10px;
+            background: #FFD700;
+            left: 50%;
+            transform-origin: bottom;
+        }
+	.loading-text {
+		position: absolute;
+		bottom: -40px;
+		width: 100%;
+		text-align: center;
+		color: #FFD700;
+		font-family: Arial, sans-serif;
+		letter-spacing: 2px;
+		text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+		font-size: 18px;
+		ize: 72px;
+		line-height: 172px;
+	}
 	/* Responsive Adjustments */
 	@media (max-width: 768px) {
 	  .hero-section {
@@ -109,10 +202,10 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <!--<a class="navbar-brand" href="#">
-          <img src="logo.jpg" alt="segaJustice Logo">
+          <img src="logo.jpg" alt="Jay Holdings Logo">
         </a>-->
 		<a class="navbar-brand" href="#">
-          <p>segaJustice</p>
+          <p>Jay Holdings</p>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -128,13 +221,20 @@
       </nav>
     </div>
   </header>
-
+	<div class="clock-loader">
+        <div class="clock-face"></div>
+        <div class="hour-markings"></div>
+        <div class="hand"></div>
+        <div class="center-dot"></div>
+        <div class="loading-text">Jay Holdings</div>
+    </div>
+	<main class="hide">
   <!-- Hero Section -->
   <section id="hero" class="hero-section">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-8 text-white">
-          <h1 class="display-4 fw-bold">Welcome to segaJustice</h1>
+          <h1 class="display-4 fw-bold">Welcome to Jay Holdings</h1>
           <p class="lead">What We Do, We Do Well.</p>
           <a href="#contact" class="btn btn-gold btn-lg mt-3">Get Started Today</a>
         </div>
@@ -147,7 +247,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <h2 class="text-navy mb-4">About segaJustice</h2>
+          <h2 class="text-navy mb-4">About Jay Holdings</h2>
           <p class="text-charcoal">We simplify business registration and compliance for startups, SMEs, and NGOs in South Africa. Our mission is to provide affordable, reliable services that empower entrepreneurs to focus on growth while we handle the paperwork.</p>
           <p class="text-charcoal"><strong>B-BBEE Level 1 Contributor</strong> – Enhancing your procurement opportunities.</p>
         </div>
@@ -257,7 +357,7 @@
   <!-- Why Choose Us -->
   <section id="why-us" class="py-5 bg-cream">
     <div class="container">
-      <h2 class="text-center text-navy mb-5">Why Choose segaJustice?</h2>
+      <h2 class="text-center text-navy mb-5">Why Choose Jay Holdings?</h2>
       <div class="row text-center">
         <div class="col-md-4 mb-4">
           <div class="p-4 bg-white rounded shadow-sm">
@@ -298,25 +398,24 @@
           </ul>
           <div class="mt-4">
             <h4 class="text-navy">Banking Details</h4>
-            <p class="text-charcoal">FNB | Acc: 62900888762<br>Branch: Bathopele (260849)</p>
+            <p class="text-charcoal">PLEASE CONTACT US FOR BANKING DEATAILS</p>
           </div>
         </div>
         <div class="col-lg-6">
-          <form class="bg-cream p-4 rounded shadow-sm">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Subject">
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-gold w-100">Send Message</button>
-          </form>
+          <div class="col-lg-6 mb-4 " > 
+			 <a href="https://wa.me/+27717268732" class="fig-anchors">
+				<figure >
+				  <img src="whatsapp.png" alt="whats-icon" />
+				  <h5>+27 71 726 8732</h5>
+				</figure>
+			</a>
+			<a href="tel:+27717268732" class="fig-anchors">
+				<figure>
+				  <img src="call.png" alt="whats-icon" />
+				  <h5>+27 67 621 1534</h5>
+				</figure>
+			</a>
+          </div>
         </div>
       </div>
     </div>
@@ -327,7 +426,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-3">
-          <h5 class="text-gold">segaJustice</h5>
+          <h5 class="text-gold">Jay Holdings</h5>
           <p>What We Do, We Do Well.</p>
           <p>REG: 2021/360241/07 | TAX: 9135813252</p>
         </div>
@@ -348,17 +447,57 @@
       </div>
       <hr class="my-4 bg-gold">
       <div class="text-center">
-        <p class="mb-0">&copy; <span class="year symbol"></span> segaJustice. All rights reserved.</p>
+        <p class="mb-0">&copy; <span class="year symbol"></span> Jay Holdings. All rights reserved.</p>
       </div>
 	  <div class="row">
 				<a href="https://maobatechsolutions.co.za" Class="symbol"><h4>Maoba Tech Designs</h4></a>
 			</div>
     </div>
   </footer>
-
+	</main>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script>
+	document.addEventListener('DOMContentLoaded', function() {            
+		setTimeout(clearDom, 3000);
+		
+		function clearDom(){
+			document.querySelector('.clock-loader').classList.add("hide");
+			document.querySelector('main').classList.remove("hide");
+		}
+	});
+
+	const startAnimi = () =>{
+		// Create hour markings
+		const hourMarkings = document.querySelector('.hour-markings');
+		for (let i = 0; i < 12; i++) {
+			const marking = document.createElement('div');
+			marking.className = 'hour-marking';
+			marking.style.transform = `rotate(${i * 30}deg) translateY(10px)`;
+			hourMarkings.appendChild(marking);
+		}
+
+		// Animate clock hand
+		gsap.to('.hand', {
+			rotation: 360,
+			duration: 2,
+			repeat: -1,
+			ease: 'none',
+			transformOrigin: 'bottom'
+		});
+
+		// Add pulsing animation to center dot
+		gsap.to('.center-dot', {
+			scale: 1.2,
+			duration: 1,
+			repeat: -1,
+			yoyo: true,
+			ease: 'power2.inOut'
+		});
+	}
+
+	startAnimi();
 	document.querySelector(".year").innerText = new Date().getFullYear();
   </script>
 </body>
